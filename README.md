@@ -24,7 +24,11 @@ If you installed with a virtual environment, you can run pyta with
 
 * `poetry run pyta`
 
-and jupyter-lab with
+### Visualization
+
+You can visualize the data any way you like. The data is stored as hdf file, which is basically a file with multiple tables. I like visualizing data with [jupyter lab](https://jupyter.org/),  and there is a sample notebook included that helps you with that. You can run jupyter lab with
 * `poety run jupyter lab`
+
+It will open a web application, and on the left side you can browse to the `notebooks` folder where you'll find a sample notebook. For convenience sake, I added dependencies for [plotly](https://plotly.com/python/), [seaborn](https://seaborn.pydata.org/) and [itables](https://github.com/mwouts/itables) in the installation dependencies, which gives you pretty nice visualization tools.
 
 
