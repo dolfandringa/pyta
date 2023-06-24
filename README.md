@@ -25,7 +25,7 @@ If you installed with a virtual environment, you can run pyta with
 * `poetry run pyta`
 
 ### Visualization
-
+![Screenshot of a jupyter notebook showing the most frequent keystrokes and their preceding keystroke frequency](docs/notebook_screenshot.png "Notebook Screenshot")
 You can visualize the data any way you like. The data is stored as hdf file, which is basically a file with multiple tables. I like visualizing data with [jupyter lab](https://jupyter.org/),  and there is a sample notebook included that helps you with that. You can run jupyter lab with
 * `poety run jupyter lab`
 

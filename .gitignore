@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+notebooks/Heatmap.ipynb
 **/*.ipynb
 # C extensions
 *.so
