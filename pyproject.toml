@@ -18,7 +18,7 @@ pytest-mock = "^3.11.1"
 pytest-parallel = "^0.1.1"
 jedi-language-server = "^0.40.0"
 tables = "^3.8.0"
-pyxhook = {version = "^1.0.0", platform = "linux"}
+pynput = "^1.7.6"
 
 
 [tool.poetry.group.dev.dependencies]

@@ -1,7 +1,7 @@
 import abc
 import asyncio
 import logging
-import pyxhook
+from pynput import keyboard
 from pathlib import Path
 import sys
 from typing import Callable
@@ -78,24 +78,26 @@ class BaseKeyLogger:
 class LinuxKeyLogger(BaseKeyLogger):
     def __init__(self):
         super().__init__()
-        self.hm = pyxhook.HookManager()
-        self.hm.KeyDown = self.handle_keypress  # type: ignore
-        self.hm.HookKeyboard()
+        self.manager = keyboard.Listener(on_press=self.handle_keypress)
         self.log = logging.getLogger(__name__)
         self.log.setLevel(logging.DEBUG)
 
     def handle_keypress(self, event):
         """Handle pyxhook events."""
         self.log.debug("\nEvent handled:\n%s", event)
-        super().handle_keypress(event.Key)
+        try:
+            key = event.char
+        except AttributeError:
+            key = event.name
+        super().handle_keypress(key)
 
     def start(self):
         """Start handling the keypresses."""
-        self.hm.start()
+        self.manager.start()
 
     def stop(self):
         """Stop handling keypresses."""
-        self.hm.cancel()
+        self.manager.stop()
 
 
 class Pyta:
