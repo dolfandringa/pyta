@@ -27,7 +27,7 @@ If you installed with a virtual environment, you can run pyta with
 ### Visualization
 ![Screenshot of a jupyter notebook showing the most frequent keystrokes and their preceding keystroke frequency](docs/notebook_screenshot.png "Notebook Screenshot")
 ![Frequency of typed keys overlaid on a keyboard](docs/frequency_map.png "Frequency of typed keys")
-![Keys typed before and after Y overlaid on a keyboard](docs/neighbours_of_y.png "Frequency of typed keys before and after Y")
+![Keys typed before and after D overlaid on a keyboard](docs/neighbours_of_d.png "Frequency of typed keys before and after D")
 You can visualize the data any way you like. The data is stored as hdf file, which is basically a file with multiple tables. I like visualizing data with [jupyter lab](https://jupyter.org/),  and there is a sample notebook included that helps you with that. You can run jupyter lab with
 * `poety run jupyter lab`
 
